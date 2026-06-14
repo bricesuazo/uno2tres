@@ -1,3 +1,8 @@
+import { buttonClass } from "@/components/ui/button";
+import { Toaster } from "@/components/ui/sonner";
+import Admin from "@/routes/Admin";
+import Landing from "@/routes/Landing";
+import Room from "@/routes/Room";
 import {
   createRootRoute,
   createRoute,
@@ -5,17 +10,14 @@ import {
   Link,
   Outlet,
 } from "@tanstack/react-router";
-import { Toaster } from "@/components/ui/sonner";
-import { buttonClass } from "@/components/ui/button";
-import Landing from "@/routes/Landing";
-import Room from "@/routes/Room";
-import Admin from "@/routes/Admin";
+import { Analytics } from "@vercel/analytics/react";
 
 function RootLayout() {
   return (
     <>
       <Outlet />
       <Toaster />
+      <Analytics />
     </>
   );
 }

@@ -13,6 +13,7 @@
   "dependencies": {
     "@base-ui-components/react": "1.0.0-rc.0",
     "@tanstack/react-router": "^1.170.15",
+    "@vercel/analytics": "^2.0.1",
     "canvas-confetti": "^1.9.4",
     "clsx": "^2.1.1",
     "convex": "^1.41.0",
