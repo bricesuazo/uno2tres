@@ -1,6 +1,7 @@
 import { Brand } from "@/components/Brand";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { celebrate } from "@/lib/confetti";
 import { GRADE_GLOW, GRADE_TEXT } from "@/lib/gradeColors";
 import {
   formatGrade,
@@ -78,6 +79,7 @@ export default function Room() {
         const info = gradeInfo(res.grade, override);
         setResult(info);
         setPhase("revealed");
+        if (info.tier !== "unknown") celebrate(info.tier);
       } else {
         notFoundLine.current =
           NOT_FOUND_LINES[Math.floor(Math.random() * NOT_FOUND_LINES.length)];
